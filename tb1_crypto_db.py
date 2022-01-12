@@ -2,6 +2,52 @@ import psycopg2
 import pandas as pd
 from config import hostname, database, username, pwd, port_id
 from datetime import date
+from tkinter import *
+from tkinter import messagebox, ttk
+from PIL import ImageTk, Image
+
+class Tab1(Tk):
+    def __init__(self, tb1):
+        self.tab = tb1
+        self.app_style()
+        
+    def app_style(self):
+        self.tab.config(bg='gray17')
+        my_img = ImageTk.PhotoImage(Image.open('./assets/img.png'))
+        my_label = Label(self.tab, image=my_img)
+        my_label.image = my_img
+        self.label(my_label)    
+        
+    
+    def label(self, my_label):
+        Label(self.tab, text="Clique no botão para inserir os dados no db", 
+        bg='gray17', fg='#e49a4c',  font = ('Helvetica 15')).pack(pady=(25, 15), anchor= "center")
+        
+        my_label.pack(pady=(10, 25))
+        self.inputs()
+        
+    def inputs(self):
+        Label(self.tab, text="BCOIN", bg='gray17', fg='#e49a4c',  font=('Helvetica 10')).pack(anchor= "center")
+        self.bcoin_total = Entry(self.tab, bg='#eee9ce')
+        self.bcoin_total.pack(pady=(3, 25), anchor= "center")
+
+        Label(self.tab, text="HEROES", bg='gray17', fg='#e49a4c',  font=('Helvetica 10')).pack(anchor= "center")
+        self.heroes = Entry(self.tab, bg='#eee9ce')
+        self.heroes.pack(pady=(3, 25), anchor= "center")
+        self.submit()
+        
+    def submit(self):
+        button = Button(self.tab, text="Inserir Dados", background="#8b0909", fg="#fefefe", font=('Helvetica 11'), 
+                        command=self.dbclass_start, height = 1, width = 13)
+        button.pack(pady = 25, anchor = "center")
+        
+        
+    def dbclass_start(self): 
+        messagebox.showinfo('Success', 'data entered successfully!')
+        CryptoController(self.bcoin_total.get(), self.heroes.get())
+        self.bcoin_total.delete(0, END) #input clear
+        self.heroes.delete(0, END) #input clear    
+
 
 class CryptoController:
     def __init__(self, bcoin_total, heroes):
