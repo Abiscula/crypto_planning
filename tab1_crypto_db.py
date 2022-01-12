@@ -3,7 +3,7 @@ import pandas as pd
 from config import hostname, database, username, pwd, port_id
 from datetime import date
 from tkinter import *
-from tkinter import messagebox, ttk
+from tkinter import messagebox
 from PIL import ImageTk, Image
 
 class Tab1(Tk):
@@ -21,7 +21,7 @@ class Tab1(Tk):
     
     def label(self, my_label):
         Label(self.tab, text="Clique no botão para inserir os dados no db", 
-        bg='gray17', fg='#e49a4c',  font = ('Helvetica 15')).pack(pady=(25, 15), anchor= "center")
+        bg='gray17', fg='#e49a4c',  font = ('Helvetica 15')).pack(pady=(20, 15), anchor= "center")
         
         my_label.pack(pady=(10, 25))
         self.inputs()

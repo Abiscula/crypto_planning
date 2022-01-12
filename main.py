@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
-from tb1_crypto_db import Tab1
-
+from tab1_crypto_db import Tab1
+from tab2_coin_chest import Tab2
 
 class App(tk.Tk):
     def __init__(self):
@@ -30,18 +30,18 @@ class App(tk.Tk):
         self.nb = ttk.Notebook(self)
         self.nb.place(x=0, y=0, width=500, height=600)
         
-        self.create_tab()
+        self.create_tabs()
         
-    def create_tab(self):
+    def create_tabs(self):
         tb1 = tk.Frame(self.nb)
         self.nb.add(tb1, text="Database")
         Tab1(tb1)
         
         tb2 = tk.Frame(self.nb)
         self.nb.add(tb2, text="Coin chest")
+        Tab2(tb2)
     
         
-
 if __name__ == '__main__':
     app = App()
     app.mainloop()
