@@ -28,11 +28,11 @@ class Tab1(Tk):
         
     def inputs(self):
         Label(self.tab, text="BCOIN", bg='gray17', fg='#e49a4c',  font=('Helvetica 10')).pack(anchor= "center")
-        self.bcoin_total = Entry(self.tab, bg='#eee9ce')
+        self.bcoin_total = Entry(self.tab, bg='#eee9ce', font=('Helvetica 12'), width=10)
         self.bcoin_total.pack(pady=(3, 25), anchor= "center")
 
         Label(self.tab, text="HEROES", bg='gray17', fg='#e49a4c',  font=('Helvetica 10')).pack(anchor= "center")
-        self.heroes = Entry(self.tab, bg='#eee9ce')
+        self.heroes = Entry(self.tab, bg='#eee9ce', font=('Helvetica 12'), width=10)
         self.heroes.pack(pady=(3, 25), anchor= "center")
         self.submit()
         
@@ -114,10 +114,11 @@ class CryptoController:
         
         
     def bcoin_media(self):
-        self.cur.execute('SELECT AVG(bcoin_earning) FROM bombcrypto')
-        avg = self.cur.fetchone()
+        self.cur.execute('SELECT bcoin_earning FROM bombcrypto')
+        avg = self.cur.fetchall()
         if avg != None:
-            self.bcoin_avg = avg
+            df = pd.DataFrame(avg, columns=['bcoin_earning'])
+            self.bcoin_avg = df['bcoin_earning'].mean()
         
         self.db_insert()
         

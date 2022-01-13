@@ -1,9 +1,14 @@
 from tkinter import *
 from PIL import ImageTk, Image
+from tkinter import messagebox
 
 class Tab2(Tk):
     def __init__(self, tb2):
         self.tab = tb2
+        self.crystal_input = 0
+        self.gold_input = 0
+        self.metal_input = 0
+        self.wood_input = 0
         self.app_style()
         
     def app_style(self):
@@ -20,6 +25,8 @@ class Tab2(Tk):
         bg='gray17', fg='#e49a4c',  font = ('Helvetica 15')).pack(pady=(20, 5), anchor= "center")
         
         my_label.pack(pady=(10, 10))
+        
+        
         
         self.chests_images()
         
@@ -58,3 +65,26 @@ class Tab2(Tk):
 
         self.wood_input = Entry(self.tab, bg='#eee9ce', width=3, font=('Helvetica 14'))
         self.wood_input.place(x=220, y=474)
+
+        self.submit()
+        
+
+    def submit(self):
+        button = Button(self.tab, text="Calcular", background="#8b0909", fg="#fefefe", font=('Helvetica 12'), 
+                        command=self.earning_farmed, height = 3, width = 12)
+        button.place(x=290, y=430)
+        
+    def earning_farmed(self):
+        crystal = int(self.crystal_input.get()) * 0.325
+        gold = int(self.gold_input.get()) * 0.1625
+        metal = int(self.metal_input.get()) * 0.0325
+        wood = int(self.wood_input.get()) * 0.01425
+        total_earning = crystal + gold + metal + wood
+        
+        output = Label(self.tab, bg='#eee9ce', width=10, font=('Helvetica 13'), text=round(total_earning, 3))
+        output.place(x=128, y=525)
+        
+        
+        # CryptoController(self.bcoin_total.get(), self.heroes.get())
+        # self.bcoin_total.delete(0, END) #input clear
+        # self.heroes.delete(0, END) #input clear
