@@ -54,16 +54,21 @@ class Tab2(Tk):
         self.chests_inputs()
     
     def chests_inputs(self):
+        
         self.crystal_input = Entry(self.tab, bg='#eee9ce', width=3, font=('Helvetica 14'))
+        self.crystal_input.insert(END, 0) #definindo valor padrão
         self.crystal_input.place(x=120, y=424)
         
         self.gold_input = Entry(self.tab, bg='#eee9ce', width=3, font=('Helvetica 14'))
+        self.gold_input.insert(END, 0)
         self.gold_input.place(x=120, y=474)
         
         self.metal_input = Entry(self.tab, bg='#eee9ce', width=3, font=('Helvetica 14'))
+        self.metal_input.insert(END, 0)
         self.metal_input.place(x=220, y=424)
 
         self.wood_input = Entry(self.tab, bg='#eee9ce', width=3, font=('Helvetica 14'))
+        self.wood_input.insert(END, 0)
         self.wood_input.place(x=220, y=474)
 
         self.submit()
@@ -84,7 +89,22 @@ class Tab2(Tk):
         output = Label(self.tab, bg='#eee9ce', width=10, font=('Helvetica 13'), text=round(total_earning, 3))
         output.place(x=128, y=525)
         
-        
         # CryptoController(self.bcoin_total.get(), self.heroes.get())
-        # self.bcoin_total.delete(0, END) #input clear
-        # self.heroes.delete(0, END) #input clear
+        
+        #Clean and insert default value on inputs after submit
+        self.crystal_input.delete(0, END)
+        self.crystal_input.insert(END, 0)
+        
+        self.gold_input.delete(0, END)
+        self.gold_input.insert(END, 0)
+        
+        self.metal_input.delete(0, END)
+        self.metal_input.insert(END, 0)
+        
+        self.wood_input.delete(0, END)
+        self.wood_input.insert(END, 0)
+        
+        
+        
+        
+        
