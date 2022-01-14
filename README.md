@@ -8,5 +8,7 @@ App em desenvolvimento, futuramente terá uma aba para Query e outra para consul
 
 <br>
 
-![image](https://user-images.githubusercontent.com/85578784/148721024-fd286381-dcaf-4665-b34c-39dce638dca9.png)
 
+![image](https://user-images.githubusercontent.com/85578784/149451197-68965473-8724-4e75-8f79-a0d758409698.png)
+
+![image](https://user-images.githubusercontent.com/85578784/149451228-0d6c3e86-5d2b-4fe5-a0d7-07214abb1c58.png)
