@@ -1,7 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
-from tab1_crypto_db import Tab1
-from tab2_coin_chest import Tab2
+from tab1_bomb_db import Tab1
+from tab2_bomb_chest import Tab2
+from tab3_ccar_db import Tab3
+from tab4_cpan_db import Tab4
 
 class App(tk.Tk):
     def __init__(self):
@@ -26,7 +28,7 @@ class App(tk.Tk):
         
         self.iconbitmap('./assets/icon.ico')
         self.geometry("500x600")
-        self.title('Bomb Crypto')
+        self.title('Crypto Planning')
         self.nb = ttk.Notebook(self)
         self.nb.place(x=0, y=0, width=500, height=600)
         
@@ -34,12 +36,20 @@ class App(tk.Tk):
         
     def create_tabs(self):
         tb1 = tk.Frame(self.nb)
-        self.nb.add(tb1, text="Database")
+        self.nb.add(tb1, text="Bomb DB")
         Tab1(tb1)
         
         tb2 = tk.Frame(self.nb)
-        self.nb.add(tb2, text="Coin chest")
+        self.nb.add(tb2, text="Bomb Chest")
         Tab2(tb2)
+        
+        tb3 = tk.Frame(self.nb)
+        self.nb.add(tb3, text="CryptoCars DB")
+        Tab3(tb3)
+        
+        tb4 = tk.Frame(self.nb)
+        self.nb.add(tb4, text="CryptoPlanes DB")
+        Tab4(tb4)
     
         
 if __name__ == '__main__':

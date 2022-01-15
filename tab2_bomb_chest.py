@@ -1,6 +1,5 @@
 from tkinter import *
 from PIL import ImageTk, Image
-from tkinter import messagebox
 
 class Tab2(Tk):
     def __init__(self, tb2):
@@ -25,8 +24,6 @@ class Tab2(Tk):
         bg='gray17', fg='#e49a4c',  font = ('Helvetica 15')).pack(pady=(20, 5), anchor= "center")
         
         my_label.pack(pady=(10, 10))
-        
-        
         
         self.chests_images()
         
@@ -88,8 +85,6 @@ class Tab2(Tk):
         
         output = Label(self.tab, bg='#eee9ce', width=10, font=('Helvetica 13'), text=round(total_earning, 3))
         output.place(x=128, y=525)
-        
-        # CryptoController(self.bcoin_total.get(), self.heroes.get())
         
         #Clean and insert default value on inputs after submit
         self.crystal_input.delete(0, END)
