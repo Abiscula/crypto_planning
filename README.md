@@ -1,10 +1,9 @@
-# db_interface - BombCrypto
-
+# Crypto Planning - NFT Games
 Projeto criado para treinar a integração e manipulação do banco de dados PostgreSQL via Python.
 
-Esta aplicação consiste em criar uma interface para inserção facilitada de dados referentes ao jogo NFT <strong>BombCrypto</strong>. Por meio deste aplicativo é possivel saber o ganho diário de BCOIN, média diaria, entre outros dados.
+Esta aplicação consiste em criar uma interface para inserção facilitada de dados referentes aos jogos NFT. Por meio deste aplicativo é possivel saber o ganho diário de criptomoedas, média diaria, entre outros dados.
 
-App em desenvolvimento, futuramente terá uma aba para Query e outra para consulta valores de moedas como BCOIN e BNB para BRL em tempo real.
+App em desenvolvimento...
 
 <br>
 
