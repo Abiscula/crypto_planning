@@ -1,13 +1,12 @@
 # Crypto Planning - NFT Games
-Projeto criado para treinar a integração e manipulação do banco de dados PostgreSQL via Python.
+Projeto criado para treinamento da integração e manipulação do banco de dados PostgreSQL via Python.
 
 Esta aplicação consiste em criar uma interface para inserção facilitada de dados referentes aos jogos NFT. Por meio deste aplicativo é possivel saber o ganho diário de criptomoedas, média diaria, entre outros dados.
-
-App em desenvolvimento...
 
 <br>
 
 
-![image](https://user-images.githubusercontent.com/85578784/149451197-68965473-8724-4e75-8f79-a0d758409698.png)
+![image](https://user-images.githubusercontent.com/85578784/150063442-fea5c21a-d277-4bdc-8e76-b4e79cd6908c.png)
 
-![image](https://user-images.githubusercontent.com/85578784/149451228-0d6c3e86-5d2b-4fe5-a0d7-07214abb1c58.png)
+
+![image](https://user-images.githubusercontent.com/85578784/150063467-fd9eb246-3de1-4ddf-8c78-de6b2c2ba030.png)
